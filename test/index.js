@@ -31,7 +31,7 @@ function main() {
         command: testPath => `node ${testPath} | ${TAP_REPORT_BIN}`
       });
 
-      // tap report data
+      // tap-report data
       generateData({
         testPaths: TEST_PATHS,
         outputDir: TAP_OUTPUT_DIR,
