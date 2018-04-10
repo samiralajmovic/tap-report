@@ -12,9 +12,7 @@
     "generate-test-data": "node test/index.js generate-test-data",
     "dev": "nodemon --quiet --exec \"clear && node test/tap-output.js | ./bin/tap-report \"",
     "lint": "huel lint --src src",
-    "lint-watch": "huel lint -w",
     "format": "huel format --src src",
-    "format-watch": "huel format -w",
     "commitlint": "huel commitmsg",
     "changelog": "huel changelog && git add CHANGELOG.md && git commit -m \"chore: update changelog\""
   },
