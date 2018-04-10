@@ -3,19 +3,7 @@ TAP version 13
 # Tests
 
 ✔ optional message 0 (1)
-✖ optional message 1 (2)
-    Overview
-    operator: equal
-    expected:  true 
-    found:  false 
-    
-    Location
-    /home/samir/Projects/programming/tap-report/test/tests/tap-output-1.js:5:5
-    
-    4:   t.equal(1 === 1, true, 'optional message 0');
-    5:   t.equal(1 === 2, true, 'optional message 1');
-    6:   t.end();
-
+✔ optional message 1 (2)
 ✖ optional message 2 (3)
     Overview
     operator: equal
@@ -33,9 +21,9 @@ TAP version 13
 # Summary
 
 Total: 3
-Passed: 1
-Failed: 2
+Passed: 2
+Failed: 1
 
-Duration: 10ms
+Duration: 9ms
 
- 2 out of 3 tests failed! 
+ 1 out of 3 tests failed! 

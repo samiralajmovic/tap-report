@@ -2,7 +2,7 @@ const test = require('tape');
 
 test('Test message 1', t => {
   t.equal(1 === 1, true, 'optional message 0');
-  t.equal(1 === 2, true, 'optional message 1');
+  t.equal(2, 2, 'optional message 1');
   t.end();
 });
 
