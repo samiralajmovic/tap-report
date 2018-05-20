@@ -1,6 +1,6 @@
 {
   "name": "tap-report",
-  "version": "0.1.0-alpha.4",
+  "version": "0.1.0-alpha.5",
   "description": "A tap reporter",
   "main": "./bin/tap-report",
   "directories": {
@@ -10,8 +10,7 @@
   "scripts": {
     "test": "node test/index.js run-tests | ./bin/tap-report",
     "generate-test-data": "node test/index.js generate-test-data",
-    "dev-tap": "nodemon --quiet --exec \"clear && node test/tap-output.js | ./bin/tap-report \"",
-    "dev-tape": "nodemon --quiet --exec \"clear && node test/tape-output.js | ./bin/tap-report \"",
+    "dev": "nodemon --quiet --exec \"clear && node test/tap-output.js | ./bin/tap-report \"",
     "dev-normal": "nodemon --quiet --exec \"clear && node test/tape-output.js \"",
     "lint": "huel lint --src src",
     "format": "huel format --src src",
