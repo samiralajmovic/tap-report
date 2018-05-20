@@ -22,7 +22,7 @@ function reporter() {
   parser.on('version', handleVersion);
   parser.on('assert', handleAssert);
   parser.on('complete', handleComplete);
-  parser.on('extra', handleExtra); // Anything not covered by tap-parser
+  parser.on('extra', handleExtra);
 
   return duplex;
 }
@@ -49,6 +49,7 @@ function handleAssert(assert) {
     format.printSuccessfulAssert({ ...assert, duration: stats.duration });
   } else {
     stats.numFailed += 1;
+    // console.log(assert);
     format.printFailedAssert({ ...assert, duration: stats.duration });
   }
 

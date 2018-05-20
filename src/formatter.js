@@ -21,11 +21,6 @@ const CHAR_TICK = figures.tick;
 const CHAR_CROSS = figures.cross;
 const NUM_SURROUNDING_LINES = 1;
 
-const OPERATORS = {
-  equal: 'equal',
-  deepEqual: 'deepEqual'
-};
-
 function printStartTest() {
   println(chalk.bold('# Tests\n'));
 }
@@ -103,33 +98,47 @@ function printFailedAssert({ id, name, diag = {} }) {
   println(`${chalk.red(CHAR_CROSS)}  ${idParam} - ${nameParam}`);
 
   // Details
-  println(chalk.bold('\n# Difference'), 4);
-  printDifference(diag.actual || diag.found, diag.expected || diag.wanted);
+  println(chalk.bold('\n# Error'), 4);
+  const { found, wanted } = getComparisonValues(diag);
+  printDifference(found, wanted);
   printFileErrorLines(diag.at);
   println();
 }
 
-function printDifference(found, wanted) {
-  let foundParsed;
-  let wantedParsed;
-  try {
-    eval('foundParsed=' + found);
-    eval('wantedParsed=' + wanted);
-  } catch (e) {
-    eval('foundParsed="' + found + '"');
-    eval('wantedParsed="' + wanted + '"');
+function getComparisonValues(diag) {
+  if (diag.hasOwnProperty('actual')) {
+    return { found: diag.actual, wanted: diag.expected };
+  } else {
+    return ({ found, wanted } = diag);
   }
+}
+
+function printDifference(found, wanted) {
+  const foundParsed = parseValue(found);
+  const wantedParsed = parseValue(wanted);
 
   const delta = jsondiffpatch.diff(foundParsed, wantedParsed);
   const output = jsondiffpatch.formatters.console.format(delta);
   println(output, 4);
 }
 
+function parseValue(value) {
+  let valueParsed;
+  if (['number', 'boolean'].includes(typeof value)) {
+    eval('valueParsed=' + value);
+  } else if (['object'].includes(typeof value)) {
+    eval('valueParsed=' + JSON.stringify(value));
+  } else if (['string'].includes(typeof value)) {
+    eval('valueParsed=' + JSON.stringify(value));
+  }
+  return valueParsed;
+}
+
 function printFileErrorLines(at) {
   let fileAndLine;
   let file;
   let lineNum;
-  println(chalk.bold('\n# Location'), 4);
+  println(chalk.bold('\n# File'), 4);
   if (typeof at === 'string') {
     fileAndLine = at.match(/\((.*)\)/)[1];
     file = fileAndLine.match(/[^:]*/)[0];
@@ -153,5 +162,5 @@ function printFileErrorLines(at) {
 }
 
 function printExtra(extra) {
-  println(chalk.red(`extra: ${extra}`));
+  // println(chalk.red(`extra: ${extra}`));
 }
