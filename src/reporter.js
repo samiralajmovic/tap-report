@@ -49,7 +49,6 @@ function handleAssert(assert) {
     format.printSuccessfulAssert({ ...assert, duration: stats.duration });
   } else {
     stats.numFailed += 1;
-    // console.log(assert);
     format.printFailedAssert({ ...assert, duration: stats.duration });
   }
 
