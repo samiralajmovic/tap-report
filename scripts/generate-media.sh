@@ -6,28 +6,27 @@ IFS=$'\n\t'
 init() {
   rm media/* -rf
   mkdir media/png
-  clear
 }
 
 simulate_tap_report() {
   local CMD='
+    clear
     export PS1="\$ "
-    sleep 1
-    echo "$ node scripts/tap-report-example.js | tap-report" | pv -qL 20
-    sleep 2
+    sleep 2s
+    echo "$ node scripts/tap-report-example.js | tap-report" | pv -qL 30
     node scripts/tap-report-example.js | tap-report
-    sleep 5
-    printf ""
+    sleep 5s
+    echo 1
   '
 
   # Simulate typing
-  asciinema rec -c "$CMD" --max-wait 10 --title tap-report --quiet media/output.json &
+  asciinema rec -c "$CMD" --max-wait 100 --title tap-report --quiet media/output.json &
   fg %1
 }
 
 generate_gif() {
   # Convert to gif
-  docker run --rm -v "$PWD":/data asciinema/asciicast2gif media/output.json media/output.gif
+  docker run --rm -v "$PWD":/data asciinema/asciicast2gif -h 30 media/output.json media/output.gif
 }
 
 generate_png() {
@@ -45,7 +44,7 @@ main() {
   init
   simulate_tap_report
   generate_gif
-  generate_png
+  # generate_png
 }
 main
 
