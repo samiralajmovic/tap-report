@@ -2,6 +2,8 @@
 
 A tap (test anything protocol) consumer that provides user friendly and informative tap output.
 
+![example output of tap-report](media/output.gif)
+
 ### Features
 
 * User friendly assertion messages
@@ -55,4 +57,7 @@ $ npm install
 # $ npm generate-test-data
 
 $ npm test
+
+# If changing the output, create new gif
+source ./generate-output
 ```
