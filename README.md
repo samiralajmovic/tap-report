@@ -66,10 +66,10 @@ $ npm install
 # $ npm run dev-tap
 
 # In case output is modified, generate new snapshots
-# $ npm generate-test-data
+# $ npm run generate-test-data
 
 # In case output is modified, create new example gif (requires docker and imagemagick)
-# npm run generate-media
+# $ npm run generate-media
 
 # Run tests
 $ npm test
