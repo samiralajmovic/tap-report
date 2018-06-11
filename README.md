@@ -44,7 +44,7 @@ Examples:
 
 ## Contribution
 
-Follows [Conventional Commits](https://conventionalcommits.org/).
+Follows [guidelines](docs/CONTRIBUTING.md) and [conventional commits](https://conventionalcommits.org/).
 
 ```sh
 # Install dependencies
@@ -58,6 +58,6 @@ $ npm install
 
 $ npm test
 
-# If changing the output, create new gif (requires docker, imagemagick)
+# When output is altered, create new example gif (requires docker and imagemagick)
 npm run generate-media
 ```
