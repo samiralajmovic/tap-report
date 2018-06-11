@@ -53,11 +53,12 @@ $ npm install
 # Starts an auto-refresh dev script
 # $ npm run dev
 
-# If you change the terminal output generate new test cases
+# In case output is modified, generate new snapshots
 # $ npm generate-test-data
 
+# Run tests
 $ npm test
 
-# When output is altered, create new example gif (requires docker and imagemagick)
+# In case output is modified, create new example gif (requires docker and imagemagick)
 npm run generate-media
 ```
