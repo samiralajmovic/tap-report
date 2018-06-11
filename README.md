@@ -35,6 +35,16 @@ Examples:
   $ <tap output> | tap-report
 ```
 
+## API
+
+Can also be consumed programmatically (via streams):
+
+```js
+const tap = require('tap');
+const tapReport = require('tap-report');
+tap.pipe(tapReport());
+```
+
 ## Inspiration
 
 * [ava](https://github.com/avajs/ava)
@@ -50,15 +60,17 @@ Follows [guidelines](docs/CONTRIBUTING.md) and [conventional commits](https://co
 # Install dependencies
 $ npm install
 
-# Starts an auto-refresh dev script
+# Start auto-refresh development scripts
 # $ npm run dev
+# $ npm run dev-example
+# $ npm run dev-tap
 
 # In case output is modified, generate new snapshots
 # $ npm generate-test-data
 
+# In case output is modified, create new example gif (requires docker and imagemagick)
+# npm run generate-media
+
 # Run tests
 $ npm test
-
-# In case output is modified, create new example gif (requires docker and imagemagick)
-npm run generate-media
 ```
