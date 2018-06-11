@@ -1,218 +1,202 @@
 {
-  "width": 159,
+  "command": "\n    export PS1=\"\\$ \"\n    sleep 1\n    echo \"$ node scripts/tap-report-example.js | tap-report\" | pv -qL 20\n    sleep 2\n    node scripts/tap-report-example.js | tap-report\n    sleep 5\n    printf \"\"\n  ",
+  "width": 106,
+  "version": 1,
+  "title": "tap-report",
   "stdout": [
     [
-      1.009349,
-      "$"
+      1.008512,
+      "$ "
     ],
     [
-      0.180306,
-      " n"
+      0.180295,
+      "no"
     ],
     [
-      0.090183,
-      "o"
-    ],
-    [
-      0.090219,
+      0.090239,
       "de"
     ],
     [
-      0.090323,
-      " "
-    ],
-    [
-      0.090086,
-      "te"
+      0.090191,
+      " s"
     ],
     [
       0.090165,
-      "s"
+      "cr"
     ],
     [
-      0.09023,
-      "t/"
+      0.090178,
+      "ip"
     ],
     [
-      0.090147,
-      "t"
+      0.09009,
+      "ts"
     ],
     [
-      0.090241,
+      0.090133,
+      "/t"
+    ],
+    [
+      0.090124,
       "ap"
     ],
     [
-      0.180351,
-      "-"
-    ],
-    [
-      0.09021,
-      "ou"
-    ],
-    [
-      0.090199,
-      "t"
-    ],
-    [
-      0.09014,
-      "pu"
-    ],
-    [
-      0.090353,
-      "t"
-    ],
-    [
-      0.090145,
-      ".j"
-    ],
-    [
-      0.090126,
-      "s"
-    ],
-    [
-      0.090164,
-      " |"
-    ],
-    [
-      0.090207,
-      " "
-    ],
-    [
-      0.180491,
-      "ta"
-    ],
-    [
-      0.090069,
-      "p"
-    ],
-    [
-      0.090439,
+      0.090128,
       "-r"
     ],
     [
-      0.090063,
-      "e"
+      0.180358,
+      "ep"
     ],
     [
-      0.090218,
-      "po"
+      0.090004,
+      "or"
     ],
     [
-      0.09017,
-      "r"
+      0.090277,
+      "t-"
     ],
     [
-      0.090163,
+      0.090105,
+      "ex"
+    ],
+    [
+      0.090178,
+      "am"
+    ],
+    [
+      0.090088,
+      "pl"
+    ],
+    [
+      0.090269,
+      "e."
+    ],
+    [
+      0.090201,
+      "js"
+    ],
+    [
+      0.090058,
+      " |"
+    ],
+    [
+      0.180307,
+      " t"
+    ],
+    [
+      0.090144,
+      "ap"
+    ],
+    [
+      0.0902,
+      "-r"
+    ],
+    [
+      0.090188,
+      "ep"
+    ],
+    [
+      0.090125,
+      "or"
+    ],
+    [
+      0.090131,
       "t\r\n"
     ],
     [
-      2.194779,
+      2.239774,
       "\u001b[1mTAP version 13\u001b[22m\r\n"
     ],
     [
-      0.00024,
+      0.000283,
       "\u001b[1m\u001b[22m\r\n"
     ],
     [
-      0.000185,
+      0.00019,
       "\u001b[1m# Tests\u001b[22m\r\n"
     ],
     [
-      3e-05,
+      2.7e-05,
       "\u001b[1m\u001b[22m\r\n"
     ],
     [
-      0.001357,
-      "\u001b[32m✔\u001b[39m  1 - foo (3ms)\r\n"
+      0.002143,
+      "\u001b[33m⚠\u001b[39m  1 - skip message (skip) (4ms)\r\n"
     ],
     [
-      0.00902,
-      "\u001b[32m✔\u001b[39m  \u001b[2m2\u001b[22m - \u001b[2mbar\u001b[22m (9ms)\r\n"
-    ],
-    [
-      0.005151,
-      "\u001b[31m✖\u001b[39m  3 - lala land (5ms)\r\n"
-    ],
-    [
-      4.1e-05,
-      "    \u001b[1m\u001b[22m\r\n    \u001b[1m# Error\u001b[22m\r\n"
-    ],
-    [
-      0.002061,
-      "    \u001b[31m1\u001b[39m => \u001b[32m2\u001b[39m\r\n"
+      0.0005,
+      "\u001b[33m⚠\u001b[39m  \u001b[2m2\u001b[22m - \u001b[2mtodo message\u001b[22m \u001b[2m(todo)\u001b[22m (0ms)\r\n"
     ],
     [
       0.000275,
-      "    \u001b[1m\u001b[22m\r\n    \u001b[1m# File\u001b[22m\r\n"
+      "\u001b[32m✔\u001b[39m  3 - should be equal (0ms)\r\n"
     ],
     [
-      6.7e-05,
-      "    \u001b[2mtest/tap-output.js:31:5\u001b[22m\r\n"
+      0.009925,
+      "\u001b[32m✔\u001b[39m  \u001b[2m4\u001b[22m - \u001b[2mcustom message\u001b[22m (9ms)\r\n"
     ],
     [
-      2.7e-05,
-      "    \r\n"
+      0.007896,
+      "\u001b[31m✖\u001b[39m  5 - should be equivalent (8ms)\r\n"
     ],
     [
-      0.000392,
-      "    \u001b[2m30: tap.test('get thing', { bail: true }, t => {\u001b[22m\r\n"
+      2.6e-05,
+      "    \u001b[1m\u001b[22m\r\n"
     ],
     [
-      3.3e-05,
-      "    31:   t.equal(1, 2, 'lala land');\r\n"
+      3.2e-05,
+      "    \u001b[1m# Error\u001b[22m\r\n"
     ],
     [
-      2.2e-05,
-      "    \u001b[2m32:   t.equal(2, 2, 'olololo');\u001b[22m\r\n"
+      0.004782,
+      "    {\r\n      foo: \u001b[31m\"bar\"\u001b[39m => \u001b[32m\"ba\"\u001b[39m\r\n    }\r\n"
     ],
     [
-      2.1e-05,
-      "\r\n"
+      0.00093,
+      "    \u001b[1m\u001b[22m\r\n    \u001b[1m# File\u001b[22m\r\n    \u001b[2mscripts/tap-report-example.js:8:5\u001b[22m\r\n    \r\n    \u001b[2m7: tap.test('subtest exampke', t => {\u001b[22m\r\n    8:   t.deepEqual({ foo: 'bar' }, { foo: 'ba' });\r\n"
     ],
     [
-      0.000554,
-      "\u001b[31mBail out! # lala land\u001b[39m\r\n"
+      4.2e-05,
+      "    \u001b[2m9:   t.end();\u001b[22m\r\n\r\n"
     ],
     [
-      0.002442,
+      0.002227,
       "\u001b[1m\u001b[22m\r\n\u001b[1m# Summary\u001b[22m\r\n\u001b[1m\u001b[22m\r\n"
     ],
     [
-      2.2e-05,
+      2.4e-05,
       "Passed: \u001b[32m2\u001b[39m\r\n"
     ],
     [
-      1.8e-05,
-      "Failed: \u001b[31m1\u001b[39m\r\n"
+      3.3e-05,
+      "Skipped: \u001b[33m1\u001b[39m\r\n"
     ],
     [
-      1.2e-05,
-      "Total: 3\r\n"
+      1.7e-05,
+      "Todo: \u001b[33m1\u001b[39m\r\n"
     ],
     [
-      1.3e-05,
-      "\r\n"
+      2.4e-05,
+      "Failed: \u001b[31m1\u001b[39m\r\nTotal: 5\r\n\r\n"
     ],
     [
-      1e-05,
-      "Duration: 23ms\r\n"
+      1.6e-05,
+      "Duration: 31ms\r\n"
     ],
     [
-      5e-05,
+      2.7e-05,
       "\u001b[31m\u001b[39m\r\n"
     ],
     [
-      1.8e-05,
-      "\u001b[31m1 out of 3 tests failed!\u001b[39m\r\n"
+      1.4e-05,
+      "\u001b[31m1 out of 5 tests failed!\u001b[39m\r\n"
     ]
   ],
-  "duration": 9.751598,
   "height": 43,
-  "version": 1,
-  "title": "tap-report",
   "env": {
-    "SHELL": "/bin/bash",
-    "TERM": "xterm-256color"
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
   },
-  "command": "\n    export PS1=\"\\$ \"\n    sleep 1\n    echo \"$ node test/tap-output.js | tap-report\" | pv -qL 15\n    sleep 2\n    node test/tap-output.js | tap-report\n    sleep 4\n    printf \"\"\n"
+  "duration": 10.714594
 }

@@ -58,6 +58,6 @@ $ npm install
 
 $ npm test
 
-# If changing the output, create new gif
-source ./generate-output
+# If changing the output, create new gif (requires docker, imagemagick)
+npm run generate-media
 ```
